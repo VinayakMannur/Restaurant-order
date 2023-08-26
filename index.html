@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order Taking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .container{
+            margin-top:3%;
+        }
+        #tables{
+            margin:6%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="#">Restaurant Order Taking</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Your Order Here</h2>
+        <form class="row gx-3 gy-2 align-items-center">
+            <div class="input-group mb-3 Inr">
+                <span class="input-group-text">INR</span>
+                <input type="number" class="form-control" id="inrRupee" aria-label="Dollar amount (with dot and two decimal places)">
+                <span class="input-group-text">.00</span>
+            </div>
+            <div class="col-sm-3">
+              <label class="visually-hidden" for="specificSizeInputName">Name</label>
+              <input type="text" class="form-control" id="dishName" placeholder="Item Name">
+            </div>
+            <div class="col-sm-3">
+              <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+              <select class="form-select" id="tableNo">
+                <option selected>Choose Table</option>
+                <option value="1">Table 1</option>
+                <option value="2">Table 2</option>
+                <option value="3">Table 3</option>
+                <option value="4">Table 4</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <button type="submit" id="submitBtn" class="btn btn-primary">Place Order</button>
+            </div>
+          </form>
+    </div>
+
+    <div id="tables">
+        <div class="list-group-vertical">
+            <h4>Table 1: </h4>
+            <div class="tableOrd  list-group" id="table1">
+                
+            </div>
+        </div>
+        <div  class="list-group-vertical">
+            <h4>Table 2: </h4>
+            <div class="tableOrd  list-group" id="table2">
+                
+            </div>
+            
+        </div>
+        <div class="list-group-vertical">
+            <h4>Table 3: </h4>
+            <div class="tableOrd  list-group" id="table3">
+                
+            </div>
+            
+        </div>
+        <div  class="list-group-vertical">
+            <h4>Table 4: </h4>
+            <div class="tableOrd list-group" id="table4">
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="sript.js"></script>
+</body>
+</html>
